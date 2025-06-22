@@ -1,0 +1,11 @@
+apiVersion: remediation.medik8s.io/v1alpha1
+kind: FenceAgentsRemediation
+metadata:
+  name: ipmi-fencing
+  namespace: openshift-workload-availability
+spec:
+  nodeSelector:
+    matchLabels:
+      fencing/role: baremetal
+  configRef:
+    name: default

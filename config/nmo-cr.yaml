@@ -1,0 +1,11 @@
+apiVersion: maintenance.k8s.io/v1beta1
+kind: NodeMaintenance
+metadata:
+  name: manual-maintenance
+  namespace: openshift-workload-availability
+spec:
+  nodeName: my-baremetal-worker-01
+  cordon: true
+  drain:
+    force: true
+    timeout: 15m

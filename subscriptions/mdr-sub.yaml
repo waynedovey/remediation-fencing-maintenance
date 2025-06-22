@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: machine-deletion-remediation
+  namespace: openshift-workload-availability
+spec:
+  channel: stable
+  name: machine-deletion-remediation-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  installPlanApproval: Automatic

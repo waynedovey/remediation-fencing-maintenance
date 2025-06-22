@@ -1,0 +1,10 @@
+apiVersion: remediation.medik8s.io/v1alpha1
+kind: MachineDeletionRemediation
+metadata:
+  name: default
+  namespace: openshift-workload-availability
+spec:
+  nodeSelector:
+    matchLabels:
+      node-role.kubernetes.io/worker: ""
+  maxEvictionTime: 10m

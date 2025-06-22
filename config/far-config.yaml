@@ -1,0 +1,14 @@
+apiVersion: remediation.medik8s.io/v1alpha1
+kind: FenceAgentsRemediationConfig
+metadata:
+  name: default
+  namespace: openshift-workload-availability
+spec:
+  fenceAgent:
+    agent: ipmilan
+    options:
+      ipaddr: BMC_IP_PLACEHOLDER
+      login: ADMIN_USER
+      passwd: ADMIN_PASSWORD
+      ssl: "0"
+      lanplus: "1"
